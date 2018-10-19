@@ -9,6 +9,7 @@ import java.util.List;
 
 public class DataMapper
 {
+	System.out.println("Hello World !");
     public static synchronized Contact find(int id_contact) throws ContactNotFoundException
     {
         //String url = "jdbc:oracle:fil.univ-lille1.fr:1s21:filora (mdp oracle)";
