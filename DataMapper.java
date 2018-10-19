@@ -9,6 +9,7 @@ import java.util.List;
 
 public class DataMapper
 {
+	System.out.println("Mon message");
 	System.out.println("Hello World !");
     public static synchronized Contact find(int id_contact) throws ContactNotFoundException
     {
