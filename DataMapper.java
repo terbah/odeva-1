@@ -44,7 +44,7 @@ public class DataMapper
 
     public static synchronized List<Contact> findAll()
     {
-        List<Contact> contacts = new ArrayList<>();
+        List<Contact> contacts = new LinkedList<>();
         Connection c = getConnection();
         try
         {
@@ -152,6 +152,6 @@ public class DataMapper
 
     public static synchronized List<Contact> findFriendList(int id)
     {
-
+	List<Contact> list = new LinkedList<>();
     }
 }
