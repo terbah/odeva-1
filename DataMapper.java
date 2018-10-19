@@ -9,13 +9,14 @@ import java.util.List;
 
 public class DataMapper
 {
+	System.out.println("Hello World !");
     public static synchronized Contact find(int id_contact) throws ContactNotFoundException
     {
         //String url = "jdbc:oracle:fil.univ-lille1.fr:1s21:filora (mdp oracle)";
         Connection conn = getConnection();
         try
         {
-            PreparedStatement ps = conn.prepareStatement("select * from contact where id = ?");
+            PreparedStatement ps = conn.prepareStatement("select id, nom, prenom, numero from contact where id = ?");
             ps.setInt(1, id_contact);
             ResultSet rs = ps.executeQuery();
             if (rs.next())
@@ -46,7 +47,7 @@ public class DataMapper
         Connection c = getConnection();
         try
         {
-            PreparedStatement stmt = c.prepareStatement("select * from contact");
+            PreparedStatement stmt = c.prepareStatement("select id, nom, prenom, numero from contact");
             ResultSet rs = stmt.executeQuery();
             while (rs.next())
             {
