@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * @author vabois
+ * @author vabois et terbah
  *
  */
 public abstract class RessourcePool<R extends Ressource> {
